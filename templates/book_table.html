@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}YUMM - Book a Table{% endblock %}
+
+{% block content %}
+<h1 class="page-title">Book a Table</h1>
+<form class="form" method="post" action="{{ url_for('book_table') }}">
+  <div class="form-row">
+    <label for="name">Full Name</label>
+    <input required type="text" id="name" name="name" value="{{ form.get('name','') }}" placeholder="Enter your Name" />
+  </div>
+  <div class="form-row">
+    <label for="phone">Phone</label>
+    <input required type="tel" id="phone" name="phone" value="{{ form.get('phone','') }}" placeholder="Enter your number" />
+  </div>
+  <div class="form-row">
+    <label for="guests">Guests</label>
+    <input required type="number" min="1" id="guests" name="guests" value="{{ form.get('guests','2') }}" />
+  </div>
+  <div class="form-row two">
+    <div>
+      <label for="date">Date</label>
+      <input required type="date" id="date" name="date" />
+    </div>
+    <div>
+      <label for="time">Time</label>
+      <input required type="time" id="time" name="time" />
+    </div>
+  </div>
+  <div class="form-row">
+    <label for="special_requests">Special Requests</label>
+    <textarea id="special_requests" name="special_requests" rows="3" placeholder="Any allergies, seating preferences, occasions?">{{ form.get('special_requests','') }}</textarea>
+  </div>
+  <div class="form-actions">
+    <button class="btn" type="submit">Confirm Booking</button>
+  </div>
+</form>
+{% endblock %}

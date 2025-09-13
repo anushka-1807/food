@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}YUMM - Menu{% endblock %}
+
+{% block content %}
+<h1 class="page-title">Our Menu</h1>
+<p class="desc" style="margin-top:-6px;margin-bottom:16px;color:var(--muted)">Freshly prepared favorites. Browse categories and pick your craving!</p>
+
+<div class="menu-grid">
+  <div class="menu-card">
+    <div class="menu-img"><img loading="lazy" src="{{ url_for('static', filename='images/Margherita Pizza.jpg') }}" alt="Margherita Pizza"></div>
+    <div class="menu-body">
+      <div class="menu-top">
+        <h3>Margherita Pizza</h3>
+        <span class="price">₹299</span>
+      </div>
+      <p class="desc">Classic tomato, mozzarella, and fresh basil.</p>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-img"><img loading="lazy" src="{{ url_for('static', filename='images/Pepperoni Pizza.jpg') }}" alt="Pepperoni Pizza"></div>
+    <div class="menu-body">
+      <div class="menu-top">
+        <h3>Pepperoni Pizza</h3>
+        <span class="price">₹349</span>
+      </div>
+      <p class="desc">Loaded with pepperoni and cheese.</p>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-img"><img loading="lazy" src="{{ url_for('static', filename='images/Caesar Salad.jpg') }}" alt="Caesar Salad"></div>
+    <div class="menu-body">
+      <div class="menu-top">
+        <h3>Caesar Salad</h3>
+        <span class="price">₹229</span>
+      </div>
+      <p class="desc">Romaine, parmesan, croutons, Caesar dressing.</p>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-img"><img loading="lazy" src="{{ url_for('static', filename='images/Veggie Burger.jpg') }}" alt="Veggie Burger"></div>
+    <div class="menu-body">
+      <div class="menu-top">
+        <h3>Veggie Burger</h3>
+        <span class="price">₹299</span>
+      </div>
+      <p class="desc">Grilled veggie patty with fresh toppings.</p>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-img"><img loading="lazy" src="{{ url_for('static', filename='images/Chicken Tikka.jpg') }}" alt="Chicken Tikka"></div>
+    <div class="menu-body">
+      <div class="menu-top">
+        <h3>Chicken Tikka</h3>
+        <span class="price">₹399</span>
+      </div>
+      <p class="desc">Spiced chicken grilled to perfection.</p>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-img"><img loading="lazy" src="{{ url_for('static', filename='images/Gulab Jamun.jpg') }}" alt="Gulab Jamun"></div>
+    <div class="menu-body">
+      <div class="menu-top">
+        <h3>Gulab Jamun</h3>
+        <span class="price">₹149</span>
+      </div>
+      <p class="desc">Soft dumplings in rose syrup.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

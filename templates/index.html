@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}YUMM - Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Welcome to <span>YUMM</span></h1>
+    <p>Your neighborhood hub for delicious bites and cozy vibes.</p>
+    <div class="hero-actions">
+      <a class="btn" href="{{ url_for('menu') }}">Explore Menu</a>
+      <a class="btn btn-outline" href="{{ url_for('book_table') }}">Book a Table</a>
+    </div>
+  </div>
+</section>
+
+<section class="features grid-3">
+  <div class="card">
+    <h3>Curated Menu</h3>
+    <p>Handpicked dishes crafted by our chefs with fresh ingredients.</p>
+  </div>
+  <div class="card">
+    <h3>Easy Booking</h3>
+    <p>Reserve a table in seconds. Perfect for your next outing.</p>
+  </div>
+  <div class="card">
+    <h3>Fast Service</h3>
+    <p>Enjoy quick service and a memorable dining experience.</p>
+  </div>
+</section>
+
+{% endblock %}

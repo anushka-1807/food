@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}YUMM - Admin Bookings{% endblock %}
+
+{% block content %}
+<h1 class="page-title">All Bookings </h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Guests</th>
+        <th>Booking Date & Time</th>
+        <th>Special Requests</th>
+        <th>Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for b in bookings %}
+      <tr>
+        <td>{{ b['id'] }}</td>
+        <td>{{ b['customer_name'] }}</td>
+        <td>{{ b['phone'] }}</td>
+        <td>{{ b['guests'] }}</td>
+        <td>{{ b['booking_datetime'] }}</td>
+        <td>{{ b['special_requests'] }}</td>
+        <td>{{ b['created_at'] }}</td>
+      </tr>
+      {% else %}
+      <tr>
+        <td colspan="7">No bookings yet.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
