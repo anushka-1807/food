@@ -74,7 +74,7 @@ def book_table():
             return render_template('book_table.html', form=request.form)
 
         # Use date & time exactly as provided by HTML
-        booking_dt_str = f"{date}T{time}"
+        booking_dt_str = f"{date}  {time}"
 
         conn = get_db()
         cur = conn.cursor()
